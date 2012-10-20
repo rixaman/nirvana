@@ -111,14 +111,36 @@ Kohana::modules(array(
 	// 'unittest'   => MODPATH.'unittest',   // Unit testing
 	// 'userguide'  => MODPATH.'userguide',  // User guide and API documentation
 	'less'		=> MODPATH.'less',
+	'kopjax'	=> MODPATH.'kopjax',
 	));
 
 /**
- * Set the routes. Each route must have a minimum of a name, a URI and a set of
- * defaults for the URI.
+ *при определении соответствия url конкретному роуту, роуты тестируются в порядке добавления, потому более общие правила должны быть добавлены после более частных. 
  */
+Route::set('contacts', 'contacts')
+	->defaults(array(
+            'controller' => 'page',
+            'action'     => 'contacts',
+	));
+Route::set('about', 'about')
+	->defaults(array(
+            'controller' => 'page',
+            'action'     => 'about',
+	)); 
+Route::set('health', 'health')
+	->defaults(array(
+            'controller' => 'page',
+            'action'     => 'health',
+	)); 
+Route::set('catalog', 'catalog')
+	->defaults(array(
+            'controller' => 'page',
+            'action'     => 'catalog',
+	));
 Route::set('default', '(<controller>(/<action>(/<id>)))')
 	->defaults(array(
-		'controller' => 'common',
+		'controller' => 'page',
 		'action'     => 'index',
 	));
+
+

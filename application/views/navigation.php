@@ -9,9 +9,16 @@
       <a class="brand" href="#"><?= $brand; ?></a>
       <div class="nav-collapse collapse">
         <ul class="nav">
-          <li class="active"><a href="#">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li <?= (($active === '/') ? 'class="active"' : NULL); ?> >
+              <a href="/">Главная</a></li>
+          <li <?= (($active === 'catalog') ? 'class="active"' : NULL); ?> >
+              <a href="#">Меню</a></li>
+          <li <?= (($active === 'health') ? 'class="active"' : NULL); ?> >
+              <a href="/health">О пользе</a></li>
+          <li <?= (($active === 'about') ? 'class="active"' : NULL); ?> >
+              <a href="about">О кафе</a></li>
+          <li <?= (($active === 'contacts') ? 'class="active"' : NULL); ?>>
+              <a href="contacts">Контакты</a></li>
         </ul>
       </div><!--/.nav-collapse -->
     </div>

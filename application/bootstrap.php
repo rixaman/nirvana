@@ -119,27 +119,27 @@ Kohana::modules(array(
  */
 Route::set('contacts', 'contacts')
 	->defaults(array(
-            'controller' => 'page',
+            'controller' => 'common',
             'action'     => 'contacts',
 	));
 Route::set('about', 'about')
 	->defaults(array(
-            'controller' => 'page',
+            'controller' => 'common',
             'action'     => 'about',
 	)); 
 Route::set('health', 'health')
 	->defaults(array(
-            'controller' => 'page',
+            'controller' => 'common',
             'action'     => 'health',
 	)); 
 Route::set('catalog', 'catalog')
 	->defaults(array(
-            'controller' => 'page',
+            'controller' => 'common',
             'action'     => 'catalog',
 	));
 Route::set('default', '(<controller>(/<action>(/<id>)))')
 	->defaults(array(
-		'controller' => 'page',
+		'controller' => 'common',
 		'action'     => 'index',
 	));
 

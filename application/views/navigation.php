@@ -12,7 +12,7 @@
           <li <?= (($active === '/') ? 'class="active"' : NULL); ?> >
               <a href="/">Главная</a></li>
           <li <?= (($active === 'catalog') ? 'class="active"' : NULL); ?> >
-              <a href="#">Меню</a></li>
+              <a href="catalog">Меню</a></li>
           <li <?= (($active === 'health') ? 'class="active"' : NULL); ?> >
               <a href="/health">О пользе</a></li>
           <li <?= (($active === 'about') ? 'class="active"' : NULL); ?> >
